@@ -2,7 +2,7 @@ import { compressDecompressFile } from "../services/compressionOperations.js";
 import {COMPRESSION_OPERATIONS} from "../constants/operations.js";
 
 export const compressionOperationHandlers = async (operation, arg, currentDirectory) => {
-    if (arg < 2) throw new Error('Invalid number of parameters');
+    if (arg.length < 2) throw new Error('Invalid number of parameters');
 
     switch (operation) {
         case COMPRESSION_OPERATIONS.compress: {
